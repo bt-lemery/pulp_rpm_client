@@ -1,4 +1,4 @@
-# SwaggerClient::ContentPackagegroupsApi
+# PulpRpmClient::ContentPackagegroupsApi
 
 All URIs are relative to *http://localhost:24817*
 
@@ -21,13 +21,13 @@ PackageGroup ViewSet.
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::ContentPackagegroupsApi.new
+api_instance = PulpRpmClient::ContentPackagegroupsApi.new
 
 package_group_href = 'package_group_href_example' # String | URI of Package Group. e.g.: /pulp/api/v3/content/rpm/packagegroups/1/
 
@@ -35,7 +35,7 @@ package_group_href = 'package_group_href_example' # String | URI of Package Grou
 begin
   #Delete a package group
   api_instance.delete(package_group_href)
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling ContentPackagegroupsApi->delete: #{e}"
 end
 ```
@@ -73,13 +73,13 @@ PackageGroup ViewSet.
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::ContentPackagegroupsApi.new
+api_instance = PulpRpmClient::ContentPackagegroupsApi.new
 
 opts = { 
   repository_version: 'repository_version_example', # String | Repository Version referenced by HREF
@@ -95,7 +95,7 @@ begin
   #List package groups
   result = api_instance.list(opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling ContentPackagegroupsApi->list: #{e}"
 end
 ```
@@ -139,13 +139,13 @@ PackageGroup ViewSet.
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::ContentPackagegroupsApi.new
+api_instance = PulpRpmClient::ContentPackagegroupsApi.new
 
 package_group_href = 'package_group_href_example' # String | URI of Package Group. e.g.: /pulp/api/v3/content/rpm/packagegroups/1/
 
@@ -158,7 +158,7 @@ begin
   #Inspect a package group
   result = api_instance.read(package_group_href, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling ContentPackagegroupsApi->read: #{e}"
 end
 ```

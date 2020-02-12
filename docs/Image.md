@@ -1,4 +1,4 @@
-# SwaggerClient::Image
+# PulpRpmClient::Image
 
 ## Properties
 Name | Type | Description | Notes

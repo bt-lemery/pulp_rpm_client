@@ -1,4 +1,4 @@
-# SwaggerClient::RepositoryAddRemoveContent
+# PulpRpmClient::RepositoryAddRemoveContent
 
 ## Properties
 Name | Type | Description | Notes

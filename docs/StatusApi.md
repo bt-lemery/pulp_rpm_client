@@ -1,4 +1,4 @@
-# SwaggerClient::StatusApi
+# PulpRpmClient::StatusApi
 
 All URIs are relative to *http://localhost:24817*
 
@@ -19,13 +19,13 @@ Returns app information including the version of pulpcore and loaded pulp plugin
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::StatusApi.new
+api_instance = PulpRpmClient::StatusApi.new
 
 opts = { 
   fields: 'fields_example', # String | A list of fields to include in the response.
@@ -36,7 +36,7 @@ begin
   #Inspect status of Pulp
   result = api_instance.status_read(opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling StatusApi->status_read: #{e}"
 end
 ```

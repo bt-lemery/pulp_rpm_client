@@ -1,4 +1,4 @@
-# SwaggerClient::FileFileDistribution
+# PulpRpmClient::FileFileDistribution
 
 ## Properties
 Name | Type | Description | Notes

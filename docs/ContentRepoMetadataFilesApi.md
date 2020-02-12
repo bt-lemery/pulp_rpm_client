@@ -1,4 +1,4 @@
-# SwaggerClient::ContentRepoMetadataFilesApi
+# PulpRpmClient::ContentRepoMetadataFilesApi
 
 All URIs are relative to *http://localhost:24817*
 
@@ -21,13 +21,13 @@ RepoMetadataFile Viewset.
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::ContentRepoMetadataFilesApi.new
+api_instance = PulpRpmClient::ContentRepoMetadataFilesApi.new
 
 repo_metadata_file_href = 'repo_metadata_file_href_example' # String | URI of Repo Metadata File. e.g.: /pulp/api/v3/content/rpm/repo_metadata_files/1/
 
@@ -35,7 +35,7 @@ repo_metadata_file_href = 'repo_metadata_file_href_example' # String | URI of Re
 begin
   #Delete a repo metadata file
   api_instance.delete(repo_metadata_file_href)
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling ContentRepoMetadataFilesApi->delete: #{e}"
 end
 ```
@@ -73,13 +73,13 @@ RepoMetadataFile Viewset.
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::ContentRepoMetadataFilesApi.new
+api_instance = PulpRpmClient::ContentRepoMetadataFilesApi.new
 
 opts = { 
   repository_version: 'repository_version_example', # String | Repository Version referenced by HREF
@@ -95,7 +95,7 @@ begin
   #List repo metadata files
   result = api_instance.list(opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling ContentRepoMetadataFilesApi->list: #{e}"
 end
 ```
@@ -139,13 +139,13 @@ RepoMetadataFile Viewset.
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::ContentRepoMetadataFilesApi.new
+api_instance = PulpRpmClient::ContentRepoMetadataFilesApi.new
 
 repo_metadata_file_href = 'repo_metadata_file_href_example' # String | URI of Repo Metadata File. e.g.: /pulp/api/v3/content/rpm/repo_metadata_files/1/
 
@@ -158,7 +158,7 @@ begin
   #Inspect a repo metadata file
   result = api_instance.read(repo_metadata_file_href, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling ContentRepoMetadataFilesApi->read: #{e}"
 end
 ```

@@ -1,4 +1,4 @@
-# SwaggerClient::Addon
+# PulpRpmClient::Addon
 
 ## Properties
 Name | Type | Description | Notes

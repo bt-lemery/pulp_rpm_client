@@ -1,4 +1,4 @@
-# SwaggerClient::ContentDistributionTreesApi
+# PulpRpmClient::ContentDistributionTreesApi
 
 All URIs are relative to *http://localhost:24817*
 
@@ -21,13 +21,13 @@ Distribution Tree Viewset.
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::ContentDistributionTreesApi.new
+api_instance = PulpRpmClient::ContentDistributionTreesApi.new
 
 distribution_tree_href = 'distribution_tree_href_example' # String | URI of Distribution Tree. e.g.: /pulp/api/v3/content/rpm/distribution_trees/1/
 
@@ -35,7 +35,7 @@ distribution_tree_href = 'distribution_tree_href_example' # String | URI of Dist
 begin
   #Delete a distribution tree
   api_instance.delete(distribution_tree_href)
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling ContentDistributionTreesApi->delete: #{e}"
 end
 ```
@@ -73,13 +73,13 @@ Distribution Tree Viewset.
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::ContentDistributionTreesApi.new
+api_instance = PulpRpmClient::ContentDistributionTreesApi.new
 
 opts = { 
   repository_version: 'repository_version_example', # String | Repository Version referenced by HREF
@@ -95,7 +95,7 @@ begin
   #List distribution trees
   result = api_instance.list(opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling ContentDistributionTreesApi->list: #{e}"
 end
 ```
@@ -139,13 +139,13 @@ Distribution Tree Viewset.
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::ContentDistributionTreesApi.new
+api_instance = PulpRpmClient::ContentDistributionTreesApi.new
 
 distribution_tree_href = 'distribution_tree_href_example' # String | URI of Distribution Tree. e.g.: /pulp/api/v3/content/rpm/distribution_trees/1/
 
@@ -158,7 +158,7 @@ begin
   #Inspect a distribution tree
   result = api_instance.read(distribution_tree_href, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling ContentDistributionTreesApi->read: #{e}"
 end
 ```

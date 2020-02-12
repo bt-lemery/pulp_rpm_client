@@ -1,4 +1,4 @@
-# SwaggerClient::UploadsApi
+# PulpRpmClient::UploadsApi
 
 All URIs are relative to *http://localhost:24817*
 
@@ -24,24 +24,24 @@ Queues a Task that creates an Artifact, and the Upload gets deleted and cannot b
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::UploadsApi.new
+api_instance = PulpRpmClient::UploadsApi.new
 
 upload_href = 'upload_href_example' # String | URI of Upload. e.g.: /pulp/api/v3/uploads/1/
 
-data = SwaggerClient::UploadCommit.new # UploadCommit | 
+data = PulpRpmClient::UploadCommit.new # UploadCommit | 
 
 
 begin
   #Finish an Upload
   result = api_instance.commit(upload_href, data)
   p result
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling UploadsApi->commit: #{e}"
 end
 ```
@@ -80,22 +80,22 @@ View for chunked uploads.
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::UploadsApi.new
+api_instance = PulpRpmClient::UploadsApi.new
 
-data = SwaggerClient::Upload.new # Upload | 
+data = PulpRpmClient::Upload.new # Upload | 
 
 
 begin
   #Create an upload
   result = api_instance.create(data)
   p result
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling UploadsApi->create: #{e}"
 end
 ```
@@ -133,13 +133,13 @@ View for chunked uploads.
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::UploadsApi.new
+api_instance = PulpRpmClient::UploadsApi.new
 
 upload_href = 'upload_href_example' # String | URI of Upload. e.g.: /pulp/api/v3/uploads/1/
 
@@ -147,7 +147,7 @@ upload_href = 'upload_href_example' # String | URI of Upload. e.g.: /pulp/api/v3
 begin
   #Delete an upload
   api_instance.delete(upload_href)
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling UploadsApi->delete: #{e}"
 end
 ```
@@ -185,13 +185,13 @@ View for chunked uploads.
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::UploadsApi.new
+api_instance = PulpRpmClient::UploadsApi.new
 
 opts = { 
   completed: 'completed_example', # String | ISO 8601 formatted dates are supported
@@ -205,7 +205,7 @@ begin
   #List uploads
   result = api_instance.list(opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling UploadsApi->list: #{e}"
 end
 ```
@@ -247,13 +247,13 @@ View for chunked uploads.
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::UploadsApi.new
+api_instance = PulpRpmClient::UploadsApi.new
 
 upload_href = 'upload_href_example' # String | URI of Upload. e.g.: /pulp/api/v3/uploads/1/
 
@@ -266,7 +266,7 @@ begin
   #Inspect an upload
   result = api_instance.read(upload_href, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling UploadsApi->read: #{e}"
 end
 ```
@@ -306,13 +306,13 @@ Upload a chunk for an upload.
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::UploadsApi.new
+api_instance = PulpRpmClient::UploadsApi.new
 
 upload_href = 'upload_href_example' # String | URI of Upload. e.g.: /pulp/api/v3/uploads/1/
 
@@ -328,7 +328,7 @@ begin
   #Upload a file chunk
   result = api_instance.update(upload_hreffile, content_range, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling UploadsApi->update: #{e}"
 end
 ```

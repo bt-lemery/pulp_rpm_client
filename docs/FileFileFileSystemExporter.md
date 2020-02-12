@@ -1,4 +1,4 @@
-# SwaggerClient::FileFileFileSystemExporter
+# PulpRpmClient::FileFileFileSystemExporter
 
 ## Properties
 Name | Type | Description | Notes

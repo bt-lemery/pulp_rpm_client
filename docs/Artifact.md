@@ -1,4 +1,4 @@
-# SwaggerClient::Artifact
+# PulpRpmClient::Artifact
 
 ## Properties
 Name | Type | Description | Notes

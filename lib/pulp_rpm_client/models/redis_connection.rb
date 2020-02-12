@@ -12,7 +12,7 @@ Swagger Codegen version: 2.4.7
 
 require 'date'
 
-module SwaggerClient
+module PulpRpmClient
   # Redis connection information
   class RedisConnection
     # Info about whether the app can connect to Redis
@@ -140,7 +140,7 @@ module SwaggerClient
           end
         end
       else # model
-        temp_model = SwaggerClient.const_get(type).new
+        temp_model = PulpRpmClient.const_get(type).new
         temp_model.build_from_hash(value)
       end
     end

@@ -1,4 +1,4 @@
-# SwaggerClient::PublicationsFileApi
+# PulpRpmClient::PublicationsFileApi
 
 All URIs are relative to *http://localhost:24817*
 
@@ -22,22 +22,22 @@ Trigger an asynchronous task to publish file content.
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::PublicationsFileApi.new
+api_instance = PulpRpmClient::PublicationsFileApi.new
 
-data = SwaggerClient::FileFilePublication.new # FileFilePublication | 
+data = PulpRpmClient::FileFilePublication.new # FileFilePublication | 
 
 
 begin
   #Create a file publication
   result = api_instance.create(data)
   p result
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling PublicationsFileApi->create: #{e}"
 end
 ```
@@ -75,13 +75,13 @@ Delete a file publication
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::PublicationsFileApi.new
+api_instance = PulpRpmClient::PublicationsFileApi.new
 
 file_publication_href = 'file_publication_href_example' # String | URI of File Publication. e.g.: /pulp/api/v3/publications/file/file/1/
 
@@ -89,7 +89,7 @@ file_publication_href = 'file_publication_href_example' # String | URI of File P
 begin
   #Delete a file publication
   api_instance.delete(file_publication_href)
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling PublicationsFileApi->delete: #{e}"
 end
 ```
@@ -127,13 +127,13 @@ List file publications
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::PublicationsFileApi.new
+api_instance = PulpRpmClient::PublicationsFileApi.new
 
 opts = { 
   ordering: 'ordering_example', # String | Which field to use when ordering the results.
@@ -147,7 +147,7 @@ begin
   #List file publications
   result = api_instance.list(opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling PublicationsFileApi->list: #{e}"
 end
 ```
@@ -189,13 +189,13 @@ Inspect a file publication
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::PublicationsFileApi.new
+api_instance = PulpRpmClient::PublicationsFileApi.new
 
 file_publication_href = 'file_publication_href_example' # String | URI of File Publication. e.g.: /pulp/api/v3/publications/file/file/1/
 
@@ -208,7 +208,7 @@ begin
   #Inspect a file publication
   result = api_instance.read(file_publication_href, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling PublicationsFileApi->read: #{e}"
 end
 ```

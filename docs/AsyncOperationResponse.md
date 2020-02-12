@@ -1,4 +1,4 @@
-# SwaggerClient::AsyncOperationResponse
+# PulpRpmClient::AsyncOperationResponse
 
 ## Properties
 Name | Type | Description | Notes

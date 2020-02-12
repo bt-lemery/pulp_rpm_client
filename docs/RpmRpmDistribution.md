@@ -1,4 +1,4 @@
-# SwaggerClient::RpmRpmDistribution
+# PulpRpmClient::RpmRpmDistribution
 
 ## Properties
 Name | Type | Description | Notes

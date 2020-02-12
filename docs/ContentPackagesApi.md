@@ -1,4 +1,4 @@
-# SwaggerClient::ContentPackagesApi
+# PulpRpmClient::ContentPackagesApi
 
 All URIs are relative to *http://localhost:24817*
 
@@ -21,13 +21,13 @@ Trigger an asynchronous task to create content,optionally create new repository 
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::ContentPackagesApi.new
+api_instance = PulpRpmClient::ContentPackagesApi.new
 
 relative_path = 'relative_path_example' # String | Path where the artifact is located relative to distributions base_path
 
@@ -41,7 +41,7 @@ begin
   #Create a package
   result = api_instance.create(relative_path, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling ContentPackagesApi->create: #{e}"
 end
 ```
@@ -82,13 +82,13 @@ Define endpoint name which will appear in the API endpoint for this content type
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::ContentPackagesApi.new
+api_instance = PulpRpmClient::ContentPackagesApi.new
 
 opts = { 
   name: 'name_example', # String | Filter results where name matches value
@@ -118,7 +118,7 @@ begin
   #List packages
   result = api_instance.list(opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling ContentPackagesApi->list: #{e}"
 end
 ```
@@ -176,13 +176,13 @@ Define endpoint name which will appear in the API endpoint for this content type
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::ContentPackagesApi.new
+api_instance = PulpRpmClient::ContentPackagesApi.new
 
 package_href = 'package_href_example' # String | URI of Package. e.g.: /pulp/api/v3/content/rpm/packages/1/
 
@@ -195,7 +195,7 @@ begin
   #Inspect a package
   result = api_instance.read(package_href, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling ContentPackagesApi->read: #{e}"
 end
 ```

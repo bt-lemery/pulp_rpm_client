@@ -1,4 +1,4 @@
-# SwaggerClient::RepositoriesFileApi
+# PulpRpmClient::RepositoriesFileApi
 
 All URIs are relative to *http://localhost:24817*
 
@@ -26,22 +26,22 @@ Create a file repository
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::RepositoriesFileApi.new
+api_instance = PulpRpmClient::RepositoriesFileApi.new
 
-data = SwaggerClient::FileFileRepository.new # FileFileRepository | 
+data = PulpRpmClient::FileFileRepository.new # FileFileRepository | 
 
 
 begin
   #Create a file repository
   result = api_instance.create(data)
   p result
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling RepositoriesFileApi->create: #{e}"
 end
 ```
@@ -79,13 +79,13 @@ Trigger an asynchronous task to delete a repository.
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::RepositoriesFileApi.new
+api_instance = PulpRpmClient::RepositoriesFileApi.new
 
 file_repository_href = 'file_repository_href_example' # String | URI of File Repository. e.g.: /pulp/api/v3/repositories/file/file/1/
 
@@ -94,7 +94,7 @@ begin
   #Delete a file repository
   result = api_instance.delete(file_repository_href, )
   p result
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling RepositoriesFileApi->delete: #{e}"
 end
 ```
@@ -132,13 +132,13 @@ List file repositorys
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::RepositoriesFileApi.new
+api_instance = PulpRpmClient::RepositoriesFileApi.new
 
 opts = { 
   name: 'name_example', # String | 
@@ -153,7 +153,7 @@ begin
   #List file repositorys
   result = api_instance.list(opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling RepositoriesFileApi->list: #{e}"
 end
 ```
@@ -196,23 +196,23 @@ Trigger an asynchronous task to create a new repository version.
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::RepositoriesFileApi.new
+api_instance = PulpRpmClient::RepositoriesFileApi.new
 
 file_repository_href = 'file_repository_href_example' # String | URI of File Repository. e.g.: /pulp/api/v3/repositories/file/file/1/
 
-data = SwaggerClient::RepositoryAddRemoveContent.new # RepositoryAddRemoveContent | 
+data = PulpRpmClient::RepositoryAddRemoveContent.new # RepositoryAddRemoveContent | 
 
 
 begin
   result = api_instance.modify(file_repository_href, data)
   p result
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling RepositoriesFileApi->modify: #{e}"
 end
 ```
@@ -251,24 +251,24 @@ Partially update a file repository
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::RepositoriesFileApi.new
+api_instance = PulpRpmClient::RepositoriesFileApi.new
 
 file_repository_href = 'file_repository_href_example' # String | URI of File Repository. e.g.: /pulp/api/v3/repositories/file/file/1/
 
-data = SwaggerClient::FileFileRepository.new # FileFileRepository | 
+data = PulpRpmClient::FileFileRepository.new # FileFileRepository | 
 
 
 begin
   #Partially update a file repository
   result = api_instance.partial_update(file_repository_href, data)
   p result
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling RepositoriesFileApi->partial_update: #{e}"
 end
 ```
@@ -307,13 +307,13 @@ Inspect a file repository
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::RepositoriesFileApi.new
+api_instance = PulpRpmClient::RepositoriesFileApi.new
 
 file_repository_href = 'file_repository_href_example' # String | URI of File Repository. e.g.: /pulp/api/v3/repositories/file/file/1/
 
@@ -326,7 +326,7 @@ begin
   #Inspect a file repository
   result = api_instance.read(file_repository_href, , opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling RepositoriesFileApi->read: #{e}"
 end
 ```
@@ -366,23 +366,23 @@ Trigger an asynchronous task to sync file content.
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::RepositoriesFileApi.new
+api_instance = PulpRpmClient::RepositoriesFileApi.new
 
 file_repository_href = 'file_repository_href_example' # String | URI of File Repository. e.g.: /pulp/api/v3/repositories/file/file/1/
 
-data = SwaggerClient::RepositorySyncURL.new # RepositorySyncURL | 
+data = PulpRpmClient::RepositorySyncURL.new # RepositorySyncURL | 
 
 
 begin
   result = api_instance.sync(file_repository_href, data)
   p result
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling RepositoriesFileApi->sync: #{e}"
 end
 ```
@@ -421,24 +421,24 @@ Trigger an asynchronous task to update a repository.
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::RepositoriesFileApi.new
+api_instance = PulpRpmClient::RepositoriesFileApi.new
 
 file_repository_href = 'file_repository_href_example' # String | URI of File Repository. e.g.: /pulp/api/v3/repositories/file/file/1/
 
-data = SwaggerClient::FileFileRepository.new # FileFileRepository | 
+data = PulpRpmClient::FileFileRepository.new # FileFileRepository | 
 
 
 begin
   #Update a file repository
   result = api_instance.update(file_repository_href, data)
   p result
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling RepositoriesFileApi->update: #{e}"
 end
 ```

@@ -1,4 +1,4 @@
-# SwaggerClient::RepositoryVersion
+# PulpRpmClient::RepositoryVersion
 
 ## Properties
 Name | Type | Description | Notes

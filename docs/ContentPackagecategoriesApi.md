@@ -1,4 +1,4 @@
-# SwaggerClient::ContentPackagecategoriesApi
+# PulpRpmClient::ContentPackagecategoriesApi
 
 All URIs are relative to *http://localhost:24817*
 
@@ -21,13 +21,13 @@ PackageCategory ViewSet.
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::ContentPackagecategoriesApi.new
+api_instance = PulpRpmClient::ContentPackagecategoriesApi.new
 
 package_category_href = 'package_category_href_example' # String | URI of Package Category. e.g.: /pulp/api/v3/content/rpm/packagecategories/1/
 
@@ -35,7 +35,7 @@ package_category_href = 'package_category_href_example' # String | URI of Packag
 begin
   #Delete a package category
   api_instance.delete(package_category_href)
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling ContentPackagecategoriesApi->delete: #{e}"
 end
 ```
@@ -73,13 +73,13 @@ PackageCategory ViewSet.
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::ContentPackagecategoriesApi.new
+api_instance = PulpRpmClient::ContentPackagecategoriesApi.new
 
 opts = { 
   repository_version: 'repository_version_example', # String | Repository Version referenced by HREF
@@ -95,7 +95,7 @@ begin
   #List package categorys
   result = api_instance.list(opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling ContentPackagecategoriesApi->list: #{e}"
 end
 ```
@@ -139,13 +139,13 @@ PackageCategory ViewSet.
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::ContentPackagecategoriesApi.new
+api_instance = PulpRpmClient::ContentPackagecategoriesApi.new
 
 package_category_href = 'package_category_href_example' # String | URI of Package Category. e.g.: /pulp/api/v3/content/rpm/packagecategories/1/
 
@@ -158,7 +158,7 @@ begin
   #Inspect a package category
   result = api_instance.read(package_category_href, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling ContentPackagecategoriesApi->read: #{e}"
 end
 ```

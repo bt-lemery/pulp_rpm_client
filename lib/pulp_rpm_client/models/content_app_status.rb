@@ -12,7 +12,7 @@ Swagger Codegen version: 2.4.7
 
 require 'date'
 
-module SwaggerClient
+module PulpRpmClient
   # List of online content apps known to the application. An online content app is actively heartbeating and can serve data to clients
   class ContentAppStatus
     # The name of the worker.
@@ -160,7 +160,7 @@ module SwaggerClient
           end
         end
       else # model
-        temp_model = SwaggerClient.const_get(type).new
+        temp_model = PulpRpmClient.const_get(type).new
         temp_model.build_from_hash(value)
       end
     end

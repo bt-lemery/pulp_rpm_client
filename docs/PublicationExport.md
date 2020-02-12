@@ -1,4 +1,4 @@
-# SwaggerClient::PublicationExport
+# PulpRpmClient::PublicationExport
 
 ## Properties
 Name | Type | Description | Notes

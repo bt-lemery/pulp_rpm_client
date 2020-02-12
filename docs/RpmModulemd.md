@@ -1,4 +1,4 @@
-# SwaggerClient::RpmModulemd
+# PulpRpmClient::RpmModulemd
 
 ## Properties
 Name | Type | Description | Notes

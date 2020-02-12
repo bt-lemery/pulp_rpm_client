@@ -1,4 +1,4 @@
-# SwaggerClient::TaskCancel
+# PulpRpmClient::TaskCancel
 
 ## Properties
 Name | Type | Description | Notes

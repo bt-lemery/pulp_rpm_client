@@ -1,4 +1,4 @@
-# SwaggerClient::RemotesFileApi
+# PulpRpmClient::RemotesFileApi
 
 All URIs are relative to *http://localhost:24817*
 
@@ -24,22 +24,22 @@ Create a file remote
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::RemotesFileApi.new
+api_instance = PulpRpmClient::RemotesFileApi.new
 
-data = SwaggerClient::FileFileRemote.new # FileFileRemote | 
+data = PulpRpmClient::FileFileRemote.new # FileFileRemote | 
 
 
 begin
   #Create a file remote
   result = api_instance.create(data)
   p result
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling RemotesFileApi->create: #{e}"
 end
 ```
@@ -77,13 +77,13 @@ Trigger an asynchronous delete task
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::RemotesFileApi.new
+api_instance = PulpRpmClient::RemotesFileApi.new
 
 file_remote_href = 'file_remote_href_example' # String | URI of File Remote. e.g.: /pulp/api/v3/remotes/file/file/1/
 
@@ -92,7 +92,7 @@ begin
   #Delete a file remote
   result = api_instance.delete(file_remote_href, )
   p result
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling RemotesFileApi->delete: #{e}"
 end
 ```
@@ -130,13 +130,13 @@ List file remotes
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::RemotesFileApi.new
+api_instance = PulpRpmClient::RemotesFileApi.new
 
 opts = { 
   name: 'name_example', # String | 
@@ -157,7 +157,7 @@ begin
   #List file remotes
   result = api_instance.list(opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling RemotesFileApi->list: #{e}"
 end
 ```
@@ -206,24 +206,24 @@ Trigger an asynchronous partial update task
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::RemotesFileApi.new
+api_instance = PulpRpmClient::RemotesFileApi.new
 
 file_remote_href = 'file_remote_href_example' # String | URI of File Remote. e.g.: /pulp/api/v3/remotes/file/file/1/
 
-data = SwaggerClient::FileFileRemote.new # FileFileRemote | 
+data = PulpRpmClient::FileFileRemote.new # FileFileRemote | 
 
 
 begin
   #Partially update a file remote
   result = api_instance.partial_update(file_remote_href, data)
   p result
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling RemotesFileApi->partial_update: #{e}"
 end
 ```
@@ -262,13 +262,13 @@ Inspect a file remote
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::RemotesFileApi.new
+api_instance = PulpRpmClient::RemotesFileApi.new
 
 file_remote_href = 'file_remote_href_example' # String | URI of File Remote. e.g.: /pulp/api/v3/remotes/file/file/1/
 
@@ -281,7 +281,7 @@ begin
   #Inspect a file remote
   result = api_instance.read(file_remote_href, , opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling RemotesFileApi->read: #{e}"
 end
 ```
@@ -321,24 +321,24 @@ Trigger an asynchronous update task
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::RemotesFileApi.new
+api_instance = PulpRpmClient::RemotesFileApi.new
 
 file_remote_href = 'file_remote_href_example' # String | URI of File Remote. e.g.: /pulp/api/v3/remotes/file/file/1/
 
-data = SwaggerClient::FileFileRemote.new # FileFileRemote | 
+data = PulpRpmClient::FileFileRemote.new # FileFileRemote | 
 
 
 begin
   #Update a file remote
   result = api_instance.update(file_remote_href, data)
   p result
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling RemotesFileApi->update: #{e}"
 end
 ```

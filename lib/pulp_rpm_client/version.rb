@@ -10,6 +10,6 @@ Swagger Codegen version: 2.4.7
 
 =end
 
-module SwaggerClient
+module PulpRpmClient
   VERSION = '1.0.0'
 end

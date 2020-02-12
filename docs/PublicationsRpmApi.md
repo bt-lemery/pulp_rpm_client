@@ -1,4 +1,4 @@
-# SwaggerClient::PublicationsRpmApi
+# PulpRpmClient::PublicationsRpmApi
 
 All URIs are relative to *http://localhost:24817*
 
@@ -22,22 +22,22 @@ Trigger an asynchronous task to create a new RPM content publication.
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::PublicationsRpmApi.new
+api_instance = PulpRpmClient::PublicationsRpmApi.new
 
-data = SwaggerClient::RpmRpmPublication.new # RpmRpmPublication | 
+data = PulpRpmClient::RpmRpmPublication.new # RpmRpmPublication | 
 
 
 begin
   #Create a rpm publication
   result = api_instance.create(data)
   p result
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling PublicationsRpmApi->create: #{e}"
 end
 ```
@@ -75,13 +75,13 @@ ViewSet for Rpm Publications.
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::PublicationsRpmApi.new
+api_instance = PulpRpmClient::PublicationsRpmApi.new
 
 rpm_publication_href = 'rpm_publication_href_example' # String | URI of Rpm Publication. e.g.: /pulp/api/v3/publications/rpm/rpm/1/
 
@@ -89,7 +89,7 @@ rpm_publication_href = 'rpm_publication_href_example' # String | URI of Rpm Publ
 begin
   #Delete a rpm publication
   api_instance.delete(rpm_publication_href)
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling PublicationsRpmApi->delete: #{e}"
 end
 ```
@@ -127,13 +127,13 @@ ViewSet for Rpm Publications.
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::PublicationsRpmApi.new
+api_instance = PulpRpmClient::PublicationsRpmApi.new
 
 opts = { 
   ordering: 'ordering_example', # String | Which field to use when ordering the results.
@@ -147,7 +147,7 @@ begin
   #List rpm publications
   result = api_instance.list(opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling PublicationsRpmApi->list: #{e}"
 end
 ```
@@ -189,13 +189,13 @@ ViewSet for Rpm Publications.
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::PublicationsRpmApi.new
+api_instance = PulpRpmClient::PublicationsRpmApi.new
 
 rpm_publication_href = 'rpm_publication_href_example' # String | URI of Rpm Publication. e.g.: /pulp/api/v3/publications/rpm/rpm/1/
 
@@ -208,7 +208,7 @@ begin
   #Inspect a rpm publication
   result = api_instance.read(rpm_publication_href, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling PublicationsRpmApi->read: #{e}"
 end
 ```

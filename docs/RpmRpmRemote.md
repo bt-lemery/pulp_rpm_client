@@ -1,4 +1,4 @@
-# SwaggerClient::RpmRpmRemote
+# PulpRpmClient::RpmRpmRemote
 
 ## Properties
 Name | Type | Description | Notes

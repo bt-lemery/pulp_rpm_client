@@ -1,4 +1,4 @@
-# SwaggerClient::OrphansApi
+# PulpRpmClient::OrphansApi
 
 All URIs are relative to *http://localhost:24817*
 
@@ -19,19 +19,19 @@ Trigger an asynchronous task that deletes allorphaned content and artifacts.
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::OrphansApi.new
+api_instance = PulpRpmClient::OrphansApi.new
 
 begin
   #Delete orphans
   result = api_instance.delete
   p result
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling OrphansApi->delete: #{e}"
 end
 ```

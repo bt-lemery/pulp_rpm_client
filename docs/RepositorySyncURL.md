@@ -1,4 +1,4 @@
-# SwaggerClient::RepositorySyncURL
+# PulpRpmClient::RepositorySyncURL
 
 ## Properties
 Name | Type | Description | Notes

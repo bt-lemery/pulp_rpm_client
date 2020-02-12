@@ -1,4 +1,4 @@
-# SwaggerClient::ContentSummary
+# PulpRpmClient::ContentSummary
 
 ## Properties
 Name | Type | Description | Notes

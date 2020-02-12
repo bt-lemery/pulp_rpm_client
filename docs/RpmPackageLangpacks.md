@@ -1,4 +1,4 @@
-# SwaggerClient::RpmPackageLangpacks
+# PulpRpmClient::RpmPackageLangpacks
 
 ## Properties
 Name | Type | Description | Notes

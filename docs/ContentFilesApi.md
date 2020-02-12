@@ -1,4 +1,4 @@
-# SwaggerClient::ContentFilesApi
+# PulpRpmClient::ContentFilesApi
 
 All URIs are relative to *http://localhost:24817*
 
@@ -21,13 +21,13 @@ Trigger an asynchronous task to create content,optionally create new repository 
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::ContentFilesApi.new
+api_instance = PulpRpmClient::ContentFilesApi.new
 
 relative_path = 'relative_path_example' # String | Path where the artifact is located relative to distributions base_path
 
@@ -41,7 +41,7 @@ begin
   #Create a file content
   result = api_instance.create(relative_path, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling ContentFilesApi->create: #{e}"
 end
 ```
@@ -82,13 +82,13 @@ List file contents
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::ContentFilesApi.new
+api_instance = PulpRpmClient::ContentFilesApi.new
 
 opts = { 
   relative_path: 'relative_path_example', # String | Filter results where relative_path matches value
@@ -106,7 +106,7 @@ begin
   #List file contents
   result = api_instance.list(opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling ContentFilesApi->list: #{e}"
 end
 ```
@@ -152,13 +152,13 @@ Inspect a file content
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::ContentFilesApi.new
+api_instance = PulpRpmClient::ContentFilesApi.new
 
 file_content_href = 'file_content_href_example' # String | URI of File Content. e.g.: /pulp/api/v3/content/file/files/1/
 
@@ -171,7 +171,7 @@ begin
   #Inspect a file content
   result = api_instance.read(file_content_href, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling ContentFilesApi->read: #{e}"
 end
 ```

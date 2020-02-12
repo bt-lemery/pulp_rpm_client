@@ -1,4 +1,4 @@
-# SwaggerClient::FileFileRemote
+# PulpRpmClient::FileFileRemote
 
 ## Properties
 Name | Type | Description | Notes

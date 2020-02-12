@@ -1,4 +1,4 @@
-# SwaggerClient::RepositoriesFileVersionsApi
+# PulpRpmClient::RepositoriesFileVersionsApi
 
 All URIs are relative to *http://localhost:24817*
 
@@ -21,13 +21,13 @@ Trigger an asynchronous task to delete a repositroy version.
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::RepositoriesFileVersionsApi.new
+api_instance = PulpRpmClient::RepositoriesFileVersionsApi.new
 
 file_repository_version_href = 'file_repository_version_href_example' # String | URI of Repository Version. e.g.: /pulp/api/v3/repositories/file/file/1/versions/1/
 
@@ -36,7 +36,7 @@ begin
   #Delete a repository version
   result = api_instance.delete(file_repository_version_href)
   p result
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling RepositoriesFileVersionsApi->delete: #{e}"
 end
 ```
@@ -74,13 +74,13 @@ List repository versions
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::RepositoriesFileVersionsApi.new
+api_instance = PulpRpmClient::RepositoriesFileVersionsApi.new
 
 file_repository_href = 'file_repository_href_example' # String | URI of File Repository. e.g.: /pulp/api/v3/repositories/file/file/1/
 
@@ -109,7 +109,7 @@ begin
   #List repository versions
   result = api_instance.list(file_repository_href, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling RepositoriesFileVersionsApi->list: #{e}"
 end
 ```
@@ -165,13 +165,13 @@ Inspect a repository version
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::RepositoriesFileVersionsApi.new
+api_instance = PulpRpmClient::RepositoriesFileVersionsApi.new
 
 file_repository_version_href = 'file_repository_version_href_example' # String | URI of Repository Version. e.g.: /pulp/api/v3/repositories/file/file/1/versions/1/
 
@@ -184,7 +184,7 @@ begin
   #Inspect a repository version
   result = api_instance.read(file_repository_version_href, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling RepositoriesFileVersionsApi->read: #{e}"
 end
 ```

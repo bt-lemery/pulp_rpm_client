@@ -1,4 +1,4 @@
-# SwaggerClient::RepositoriesRpmVersionsApi
+# PulpRpmClient::RepositoriesRpmVersionsApi
 
 All URIs are relative to *http://localhost:24817*
 
@@ -21,13 +21,13 @@ Trigger an asynchronous task to delete a repositroy version.
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::RepositoriesRpmVersionsApi.new
+api_instance = PulpRpmClient::RepositoriesRpmVersionsApi.new
 
 rpm_repository_version_href = 'rpm_repository_version_href_example' # String | URI of Repository Version. e.g.: /pulp/api/v3/repositories/rpm/rpm/1/versions/1/
 
@@ -36,7 +36,7 @@ begin
   #Delete a repository version
   result = api_instance.delete(rpm_repository_version_href)
   p result
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling RepositoriesRpmVersionsApi->delete: #{e}"
 end
 ```
@@ -74,13 +74,13 @@ RpmRepositoryVersion represents a single rpm repository version.
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::RepositoriesRpmVersionsApi.new
+api_instance = PulpRpmClient::RepositoriesRpmVersionsApi.new
 
 rpm_repository_href = 'rpm_repository_href_example' # String | URI of Rpm Repository. e.g.: /pulp/api/v3/repositories/rpm/rpm/1/
 
@@ -109,7 +109,7 @@ begin
   #List repository versions
   result = api_instance.list(rpm_repository_href, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling RepositoriesRpmVersionsApi->list: #{e}"
 end
 ```
@@ -165,13 +165,13 @@ RpmRepositoryVersion represents a single rpm repository version.
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::RepositoriesRpmVersionsApi.new
+api_instance = PulpRpmClient::RepositoriesRpmVersionsApi.new
 
 rpm_repository_version_href = 'rpm_repository_version_href_example' # String | URI of Repository Version. e.g.: /pulp/api/v3/repositories/rpm/rpm/1/versions/1/
 
@@ -184,7 +184,7 @@ begin
   #Inspect a repository version
   result = api_instance.read(rpm_repository_version_href, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling RepositoriesRpmVersionsApi->read: #{e}"
 end
 ```

@@ -1,4 +1,4 @@
-# SwaggerClient::TasksApi
+# PulpRpmClient::TasksApi
 
 All URIs are relative to *http://localhost:24817*
 
@@ -22,13 +22,13 @@ Delete a task
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::TasksApi.new
+api_instance = PulpRpmClient::TasksApi.new
 
 task_href = 'task_href_example' # String | URI of Task. e.g.: /pulp/api/v3/tasks/1/
 
@@ -36,7 +36,7 @@ task_href = 'task_href_example' # String | URI of Task. e.g.: /pulp/api/v3/tasks
 begin
   #Delete a task
   api_instance.delete(task_href, )
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling TasksApi->delete: #{e}"
 end
 ```
@@ -74,13 +74,13 @@ List tasks
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::TasksApi.new
+api_instance = PulpRpmClient::TasksApi.new
 
 opts = { 
   ordering: 'ordering_example', # String | Which field to use when ordering the results.
@@ -115,7 +115,7 @@ begin
   #List tasks
   result = api_instance.list(opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling TasksApi->list: #{e}"
 end
 ```
@@ -178,13 +178,13 @@ Inspect a task
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::TasksApi.new
+api_instance = PulpRpmClient::TasksApi.new
 
 task_href = 'task_href_example' # String | URI of Task. e.g.: /pulp/api/v3/tasks/1/
 
@@ -197,7 +197,7 @@ begin
   #Inspect a task
   result = api_instance.read(task_href, , opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling TasksApi->read: #{e}"
 end
 ```
@@ -237,24 +237,24 @@ This operation cancels a task.
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::TasksApi.new
+api_instance = PulpRpmClient::TasksApi.new
 
 task_href = 'task_href_example' # String | URI of Task. e.g.: /pulp/api/v3/tasks/1/
 
-data = SwaggerClient::TaskCancel.new # TaskCancel | 
+data = PulpRpmClient::TaskCancel.new # TaskCancel | 
 
 
 begin
   #Cancel a task
   result = api_instance.tasks_cancel(task_href, data)
   p result
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling TasksApi->tasks_cancel: #{e}"
 end
 ```

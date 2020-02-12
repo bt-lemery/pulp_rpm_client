@@ -1,4 +1,4 @@
-# SwaggerClient::DistributionsRpmApi
+# PulpRpmClient::DistributionsRpmApi
 
 All URIs are relative to *http://localhost:24817*
 
@@ -24,22 +24,22 @@ Trigger an asynchronous create task
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::DistributionsRpmApi.new
+api_instance = PulpRpmClient::DistributionsRpmApi.new
 
-data = SwaggerClient::RpmRpmDistribution.new # RpmRpmDistribution | 
+data = PulpRpmClient::RpmRpmDistribution.new # RpmRpmDistribution | 
 
 
 begin
   #Create a rpm distribution
   result = api_instance.create(data)
   p result
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling DistributionsRpmApi->create: #{e}"
 end
 ```
@@ -77,13 +77,13 @@ Trigger an asynchronous delete task
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::DistributionsRpmApi.new
+api_instance = PulpRpmClient::DistributionsRpmApi.new
 
 rpm_distribution_href = 'rpm_distribution_href_example' # String | URI of Rpm Distribution. e.g.: /pulp/api/v3/distributions/rpm/rpm/1/
 
@@ -92,7 +92,7 @@ begin
   #Delete a rpm distribution
   result = api_instance.delete(rpm_distribution_href, )
   p result
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling DistributionsRpmApi->delete: #{e}"
 end
 ```
@@ -130,13 +130,13 @@ ViewSet for RPM Distributions.
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::DistributionsRpmApi.new
+api_instance = PulpRpmClient::DistributionsRpmApi.new
 
 opts = { 
   name: 'name_example', # String | 
@@ -155,7 +155,7 @@ begin
   #List rpm distributions
   result = api_instance.list(opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling DistributionsRpmApi->list: #{e}"
 end
 ```
@@ -202,24 +202,24 @@ Trigger an asynchronous partial update task
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::DistributionsRpmApi.new
+api_instance = PulpRpmClient::DistributionsRpmApi.new
 
 rpm_distribution_href = 'rpm_distribution_href_example' # String | URI of Rpm Distribution. e.g.: /pulp/api/v3/distributions/rpm/rpm/1/
 
-data = SwaggerClient::RpmRpmDistribution.new # RpmRpmDistribution | 
+data = PulpRpmClient::RpmRpmDistribution.new # RpmRpmDistribution | 
 
 
 begin
   #Partially update a rpm distribution
   result = api_instance.partial_update(rpm_distribution_href, data)
   p result
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling DistributionsRpmApi->partial_update: #{e}"
 end
 ```
@@ -258,13 +258,13 @@ ViewSet for RPM Distributions.
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::DistributionsRpmApi.new
+api_instance = PulpRpmClient::DistributionsRpmApi.new
 
 rpm_distribution_href = 'rpm_distribution_href_example' # String | URI of Rpm Distribution. e.g.: /pulp/api/v3/distributions/rpm/rpm/1/
 
@@ -277,7 +277,7 @@ begin
   #Inspect a rpm distribution
   result = api_instance.read(rpm_distribution_href, , opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling DistributionsRpmApi->read: #{e}"
 end
 ```
@@ -317,24 +317,24 @@ Trigger an asynchronous update task
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::DistributionsRpmApi.new
+api_instance = PulpRpmClient::DistributionsRpmApi.new
 
 rpm_distribution_href = 'rpm_distribution_href_example' # String | URI of Rpm Distribution. e.g.: /pulp/api/v3/distributions/rpm/rpm/1/
 
-data = SwaggerClient::RpmRpmDistribution.new # RpmRpmDistribution | 
+data = PulpRpmClient::RpmRpmDistribution.new # RpmRpmDistribution | 
 
 
 begin
   #Update a rpm distribution
   result = api_instance.update(rpm_distribution_href, data)
   p result
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling DistributionsRpmApi->update: #{e}"
 end
 ```

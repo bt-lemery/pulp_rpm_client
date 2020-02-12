@@ -1,4 +1,4 @@
-# SwaggerClient::Task
+# PulpRpmClient::Task
 
 ## Properties
 Name | Type | Description | Notes

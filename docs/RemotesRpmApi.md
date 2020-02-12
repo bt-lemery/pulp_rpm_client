@@ -1,4 +1,4 @@
-# SwaggerClient::RemotesRpmApi
+# PulpRpmClient::RemotesRpmApi
 
 All URIs are relative to *http://localhost:24817*
 
@@ -24,22 +24,22 @@ A ViewSet for RpmRemote.
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::RemotesRpmApi.new
+api_instance = PulpRpmClient::RemotesRpmApi.new
 
-data = SwaggerClient::RpmRpmRemote.new # RpmRpmRemote | 
+data = PulpRpmClient::RpmRpmRemote.new # RpmRpmRemote | 
 
 
 begin
   #Create a rpm remote
   result = api_instance.create(data)
   p result
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling RemotesRpmApi->create: #{e}"
 end
 ```
@@ -77,13 +77,13 @@ Trigger an asynchronous delete task
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::RemotesRpmApi.new
+api_instance = PulpRpmClient::RemotesRpmApi.new
 
 rpm_remote_href = 'rpm_remote_href_example' # String | URI of Rpm Remote. e.g.: /pulp/api/v3/remotes/rpm/rpm/1/
 
@@ -92,7 +92,7 @@ begin
   #Delete a rpm remote
   result = api_instance.delete(rpm_remote_href, )
   p result
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling RemotesRpmApi->delete: #{e}"
 end
 ```
@@ -130,13 +130,13 @@ A ViewSet for RpmRemote.
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::RemotesRpmApi.new
+api_instance = PulpRpmClient::RemotesRpmApi.new
 
 opts = { 
   name: 'name_example', # String | 
@@ -157,7 +157,7 @@ begin
   #List rpm remotes
   result = api_instance.list(opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling RemotesRpmApi->list: #{e}"
 end
 ```
@@ -206,24 +206,24 @@ Trigger an asynchronous partial update task
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::RemotesRpmApi.new
+api_instance = PulpRpmClient::RemotesRpmApi.new
 
 rpm_remote_href = 'rpm_remote_href_example' # String | URI of Rpm Remote. e.g.: /pulp/api/v3/remotes/rpm/rpm/1/
 
-data = SwaggerClient::RpmRpmRemote.new # RpmRpmRemote | 
+data = PulpRpmClient::RpmRpmRemote.new # RpmRpmRemote | 
 
 
 begin
   #Partially update a rpm remote
   result = api_instance.partial_update(rpm_remote_href, data)
   p result
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling RemotesRpmApi->partial_update: #{e}"
 end
 ```
@@ -262,13 +262,13 @@ A ViewSet for RpmRemote.
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::RemotesRpmApi.new
+api_instance = PulpRpmClient::RemotesRpmApi.new
 
 rpm_remote_href = 'rpm_remote_href_example' # String | URI of Rpm Remote. e.g.: /pulp/api/v3/remotes/rpm/rpm/1/
 
@@ -281,7 +281,7 @@ begin
   #Inspect a rpm remote
   result = api_instance.read(rpm_remote_href, , opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling RemotesRpmApi->read: #{e}"
 end
 ```
@@ -321,24 +321,24 @@ Trigger an asynchronous update task
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::RemotesRpmApi.new
+api_instance = PulpRpmClient::RemotesRpmApi.new
 
 rpm_remote_href = 'rpm_remote_href_example' # String | URI of Rpm Remote. e.g.: /pulp/api/v3/remotes/rpm/rpm/1/
 
-data = SwaggerClient::RpmRpmRemote.new # RpmRpmRemote | 
+data = PulpRpmClient::RpmRpmRemote.new # RpmRpmRemote | 
 
 
 begin
   #Update a rpm remote
   result = api_instance.update(rpm_remote_href, data)
   p result
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling RemotesRpmApi->update: #{e}"
 end
 ```

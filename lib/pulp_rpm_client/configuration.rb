@@ -12,7 +12,7 @@ Swagger Codegen version: 2.4.7
 
 require 'uri'
 
-module SwaggerClient
+module PulpRpmClient
   class Configuration
     # Defines url scheme
     attr_accessor :scheme

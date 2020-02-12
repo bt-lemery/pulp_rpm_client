@@ -1,4 +1,4 @@
-# SwaggerClient::RpmPackageEnvironment
+# PulpRpmClient::RpmPackageEnvironment
 
 ## Properties
 Name | Type | Description | Notes

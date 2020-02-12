@@ -1,4 +1,4 @@
-# SwaggerClient::ContentModulemdsApi
+# PulpRpmClient::ContentModulemdsApi
 
 All URIs are relative to *http://localhost:24817*
 
@@ -21,13 +21,13 @@ Trigger an asynchronous task to create content,optionally create new repository 
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::ContentModulemdsApi.new
+api_instance = PulpRpmClient::ContentModulemdsApi.new
 
 relative_path = 'relative_path_example' # String | Path where the artifact is located relative to distributions base_path
 
@@ -56,7 +56,7 @@ begin
   #Create a modulemd
   result = api_instance.create(relative_path, name, stream, version, context, arch, artifacts, dependencies, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling ContentModulemdsApi->create: #{e}"
 end
 ```
@@ -105,13 +105,13 @@ ViewSet for Modulemd.
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::ContentModulemdsApi.new
+api_instance = PulpRpmClient::ContentModulemdsApi.new
 
 opts = { 
   repository_version: 'repository_version_example', # String | Repository Version referenced by HREF
@@ -127,7 +127,7 @@ begin
   #List modulemds
   result = api_instance.list(opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling ContentModulemdsApi->list: #{e}"
 end
 ```
@@ -171,13 +171,13 @@ ViewSet for Modulemd.
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::ContentModulemdsApi.new
+api_instance = PulpRpmClient::ContentModulemdsApi.new
 
 modulemd_href = 'modulemd_href_example' # String | URI of Modulemd. e.g.: /pulp/api/v3/content/rpm/modulemds/1/
 
@@ -190,7 +190,7 @@ begin
   #Inspect a modulemd
   result = api_instance.read(modulemd_href, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling ContentModulemdsApi->read: #{e}"
 end
 ```

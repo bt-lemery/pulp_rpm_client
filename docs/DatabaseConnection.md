@@ -1,4 +1,4 @@
-# SwaggerClient::DatabaseConnection
+# PulpRpmClient::DatabaseConnection
 
 ## Properties
 Name | Type | Description | Notes

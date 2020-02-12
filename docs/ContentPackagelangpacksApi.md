@@ -1,4 +1,4 @@
-# SwaggerClient::ContentPackagelangpacksApi
+# PulpRpmClient::ContentPackagelangpacksApi
 
 All URIs are relative to *http://localhost:24817*
 
@@ -21,13 +21,13 @@ PackageLangpacks ViewSet.
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::ContentPackagelangpacksApi.new
+api_instance = PulpRpmClient::ContentPackagelangpacksApi.new
 
 package_langpacks_href = 'package_langpacks_href_example' # String | URI of Package Langpacks. e.g.: /pulp/api/v3/content/rpm/packagelangpacks/1/
 
@@ -35,7 +35,7 @@ package_langpacks_href = 'package_langpacks_href_example' # String | URI of Pack
 begin
   #Delete a package langpacks
   api_instance.delete(package_langpacks_href)
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling ContentPackagelangpacksApi->delete: #{e}"
 end
 ```
@@ -73,13 +73,13 @@ PackageLangpacks ViewSet.
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::ContentPackagelangpacksApi.new
+api_instance = PulpRpmClient::ContentPackagelangpacksApi.new
 
 opts = { 
   repository_version: 'repository_version_example', # String | Repository Version referenced by HREF
@@ -95,7 +95,7 @@ begin
   #List package langpackss
   result = api_instance.list(opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling ContentPackagelangpacksApi->list: #{e}"
 end
 ```
@@ -139,13 +139,13 @@ PackageLangpacks ViewSet.
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::ContentPackagelangpacksApi.new
+api_instance = PulpRpmClient::ContentPackagelangpacksApi.new
 
 package_langpacks_href = 'package_langpacks_href_example' # String | URI of Package Langpacks. e.g.: /pulp/api/v3/content/rpm/packagelangpacks/1/
 
@@ -158,7 +158,7 @@ begin
   #Inspect a package langpacks
   result = api_instance.read(package_langpacks_href, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling ContentPackagelangpacksApi->read: #{e}"
 end
 ```

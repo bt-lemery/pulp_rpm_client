@@ -1,4 +1,4 @@
-# SwaggerClient::Checksum
+# PulpRpmClient::Checksum
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# SwaggerClient::InlineResponse20012
+# PulpRpmClient::InlineResponse20012
 
 ## Properties
 Name | Type | Description | Notes

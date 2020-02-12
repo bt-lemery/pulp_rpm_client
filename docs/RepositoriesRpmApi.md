@@ -1,4 +1,4 @@
-# SwaggerClient::RepositoriesRpmApi
+# PulpRpmClient::RepositoriesRpmApi
 
 All URIs are relative to *http://localhost:24817*
 
@@ -26,22 +26,22 @@ A ViewSet for RpmRepository.
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::RepositoriesRpmApi.new
+api_instance = PulpRpmClient::RepositoriesRpmApi.new
 
-data = SwaggerClient::RpmRpmRepository.new # RpmRpmRepository | 
+data = PulpRpmClient::RpmRpmRepository.new # RpmRpmRepository | 
 
 
 begin
   #Create a rpm repository
   result = api_instance.create(data)
   p result
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling RepositoriesRpmApi->create: #{e}"
 end
 ```
@@ -79,13 +79,13 @@ Trigger an asynchronous task to delete a repository.
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::RepositoriesRpmApi.new
+api_instance = PulpRpmClient::RepositoriesRpmApi.new
 
 rpm_repository_href = 'rpm_repository_href_example' # String | URI of Rpm Repository. e.g.: /pulp/api/v3/repositories/rpm/rpm/1/
 
@@ -94,7 +94,7 @@ begin
   #Delete a rpm repository
   result = api_instance.delete(rpm_repository_href, )
   p result
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling RepositoriesRpmApi->delete: #{e}"
 end
 ```
@@ -132,13 +132,13 @@ A ViewSet for RpmRepository.
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::RepositoriesRpmApi.new
+api_instance = PulpRpmClient::RepositoriesRpmApi.new
 
 opts = { 
   name: 'name_example', # String | 
@@ -153,7 +153,7 @@ begin
   #List rpm repositorys
   result = api_instance.list(opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling RepositoriesRpmApi->list: #{e}"
 end
 ```
@@ -196,23 +196,23 @@ Trigger an asynchronous task to create a new repository version.
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::RepositoriesRpmApi.new
+api_instance = PulpRpmClient::RepositoriesRpmApi.new
 
 rpm_repository_href = 'rpm_repository_href_example' # String | URI of Rpm Repository. e.g.: /pulp/api/v3/repositories/rpm/rpm/1/
 
-data = SwaggerClient::RepositoryAddRemoveContent.new # RepositoryAddRemoveContent | 
+data = PulpRpmClient::RepositoryAddRemoveContent.new # RepositoryAddRemoveContent | 
 
 
 begin
   result = api_instance.modify(rpm_repository_href, data)
   p result
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling RepositoriesRpmApi->modify: #{e}"
 end
 ```
@@ -251,24 +251,24 @@ A ViewSet for RpmRepository.
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::RepositoriesRpmApi.new
+api_instance = PulpRpmClient::RepositoriesRpmApi.new
 
 rpm_repository_href = 'rpm_repository_href_example' # String | URI of Rpm Repository. e.g.: /pulp/api/v3/repositories/rpm/rpm/1/
 
-data = SwaggerClient::RpmRpmRepository.new # RpmRpmRepository | 
+data = PulpRpmClient::RpmRpmRepository.new # RpmRpmRepository | 
 
 
 begin
   #Partially update a rpm repository
   result = api_instance.partial_update(rpm_repository_href, data)
   p result
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling RepositoriesRpmApi->partial_update: #{e}"
 end
 ```
@@ -307,13 +307,13 @@ A ViewSet for RpmRepository.
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::RepositoriesRpmApi.new
+api_instance = PulpRpmClient::RepositoriesRpmApi.new
 
 rpm_repository_href = 'rpm_repository_href_example' # String | URI of Rpm Repository. e.g.: /pulp/api/v3/repositories/rpm/rpm/1/
 
@@ -326,7 +326,7 @@ begin
   #Inspect a rpm repository
   result = api_instance.read(rpm_repository_href, , opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling RepositoriesRpmApi->read: #{e}"
 end
 ```
@@ -366,24 +366,24 @@ Trigger an asynchronous task to sync RPM content.
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::RepositoriesRpmApi.new
+api_instance = PulpRpmClient::RepositoriesRpmApi.new
 
 rpm_repository_href = 'rpm_repository_href_example' # String | URI of Rpm Repository. e.g.: /pulp/api/v3/repositories/rpm/rpm/1/
 
-data = SwaggerClient::RepositorySyncURL.new # RepositorySyncURL | 
+data = PulpRpmClient::RepositorySyncURL.new # RepositorySyncURL | 
 
 
 begin
   #Sync from remote
   result = api_instance.sync(rpm_repository_href, data)
   p result
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling RepositoriesRpmApi->sync: #{e}"
 end
 ```
@@ -422,24 +422,24 @@ Trigger an asynchronous task to update a repository.
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::RepositoriesRpmApi.new
+api_instance = PulpRpmClient::RepositoriesRpmApi.new
 
 rpm_repository_href = 'rpm_repository_href_example' # String | URI of Rpm Repository. e.g.: /pulp/api/v3/repositories/rpm/rpm/1/
 
-data = SwaggerClient::RpmRpmRepository.new # RpmRpmRepository | 
+data = PulpRpmClient::RpmRpmRepository.new # RpmRpmRepository | 
 
 
 begin
   #Update a rpm repository
   result = api_instance.update(rpm_repository_href, data)
   p result
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling RepositoriesRpmApi->update: #{e}"
 end
 ```

@@ -1,4 +1,4 @@
-# SwaggerClient::RpmRepoMetadataFile
+# PulpRpmClient::RpmRepoMetadataFile
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# SwaggerClient::Storage
+# PulpRpmClient::Storage
 
 ## Properties
 Name | Type | Description | Notes

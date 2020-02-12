@@ -1,4 +1,4 @@
-# SwaggerClient::ArtifactsApi
+# PulpRpmClient::ArtifactsApi
 
 All URIs are relative to *http://localhost:24817*
 
@@ -22,13 +22,13 @@ Create an artifact
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::ArtifactsApi.new
+api_instance = PulpRpmClient::ArtifactsApi.new
 
 file = File.new('/path/to/file.txt') # File | The stored file.
 
@@ -46,7 +46,7 @@ begin
   #Create an artifact
   result = api_instance.create(file, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling ArtifactsApi->create: #{e}"
 end
 ```
@@ -91,13 +91,13 @@ Remove Artifact only if it is not associated with any Content.
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::ArtifactsApi.new
+api_instance = PulpRpmClient::ArtifactsApi.new
 
 artifact_href = 'artifact_href_example' # String | URI of Artifact. e.g.: /pulp/api/v3/artifacts/1/
 
@@ -105,7 +105,7 @@ artifact_href = 'artifact_href_example' # String | URI of Artifact. e.g.: /pulp/
 begin
   #Delete an artifact
   api_instance.delete(artifact_href)
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling ArtifactsApi->delete: #{e}"
 end
 ```
@@ -143,13 +143,13 @@ List artifacts
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::ArtifactsApi.new
+api_instance = PulpRpmClient::ArtifactsApi.new
 
 opts = { 
   repository_version: 'repository_version_example', # String | Repository Version referenced by HREF
@@ -169,7 +169,7 @@ begin
   #List artifacts
   result = api_instance.list(opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling ArtifactsApi->list: #{e}"
 end
 ```
@@ -217,13 +217,13 @@ Inspect an artifact
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::ArtifactsApi.new
+api_instance = PulpRpmClient::ArtifactsApi.new
 
 artifact_href = 'artifact_href_example' # String | URI of Artifact. e.g.: /pulp/api/v3/artifacts/1/
 
@@ -236,7 +236,7 @@ begin
   #Inspect an artifact
   result = api_instance.read(artifact_href, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling ArtifactsApi->read: #{e}"
 end
 ```

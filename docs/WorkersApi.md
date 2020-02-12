@@ -1,4 +1,4 @@
-# SwaggerClient::WorkersApi
+# PulpRpmClient::WorkersApi
 
 All URIs are relative to *http://localhost:24817*
 
@@ -20,13 +20,13 @@ List workers
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::WorkersApi.new
+api_instance = PulpRpmClient::WorkersApi.new
 
 opts = { 
   name: 'name_example', # String | 
@@ -49,7 +49,7 @@ begin
   #List workers
   result = api_instance.list(opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling WorkersApi->list: #{e}"
 end
 ```
@@ -100,13 +100,13 @@ Inspect a worker
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::WorkersApi.new
+api_instance = PulpRpmClient::WorkersApi.new
 
 worker_href = 'worker_href_example' # String | URI of Worker. e.g.: /pulp/api/v3/workers/1/
 
@@ -119,7 +119,7 @@ begin
   #Inspect a worker
   result = api_instance.read(worker_href, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling WorkersApi->read: #{e}"
 end
 ```

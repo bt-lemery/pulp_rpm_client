@@ -1,4 +1,4 @@
-# SwaggerClient::Upload
+# PulpRpmClient::Upload
 
 ## Properties
 Name | Type | Description | Notes

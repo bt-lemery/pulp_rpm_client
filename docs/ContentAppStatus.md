@@ -1,4 +1,4 @@
-# SwaggerClient::ContentAppStatus
+# PulpRpmClient::ContentAppStatus
 
 ## Properties
 Name | Type | Description | Notes

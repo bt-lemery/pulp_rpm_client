@@ -1,4 +1,4 @@
-# SwaggerClient::ContentAdvisoriesApi
+# PulpRpmClient::ContentAdvisoriesApi
 
 All URIs are relative to *http://localhost:24817*
 
@@ -21,13 +21,13 @@ Trigger an asynchronous task to create content,optionally create new repository 
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::ContentAdvisoriesApi.new
+api_instance = PulpRpmClient::ContentAdvisoriesApi.new
 
 relative_path = 'relative_path_example' # String | Path where the artifact is located relative to distributions base_path
 
@@ -41,7 +41,7 @@ begin
   #Create an update record
   result = api_instance.create(relative_path, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling ContentAdvisoriesApi->create: #{e}"
 end
 ```
@@ -82,13 +82,13 @@ Define endpoint name which will appear in the API endpoint for this content type
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::ContentAdvisoriesApi.new
+api_instance = PulpRpmClient::ContentAdvisoriesApi.new
 
 opts = { 
   id: 'id_example', # String | Filter results where id matches value
@@ -112,7 +112,7 @@ begin
   #List update records
   result = api_instance.list(opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling ContentAdvisoriesApi->list: #{e}"
 end
 ```
@@ -164,13 +164,13 @@ Define endpoint name which will appear in the API endpoint for this content type
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::ContentAdvisoriesApi.new
+api_instance = PulpRpmClient::ContentAdvisoriesApi.new
 
 update_record_href = 'update_record_href_example' # String | URI of Update Record. e.g.: /pulp/api/v3/content/rpm/advisories/1/
 
@@ -183,7 +183,7 @@ begin
   #Inspect an update record
   result = api_instance.read(update_record_href, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling ContentAdvisoriesApi->read: #{e}"
 end
 ```

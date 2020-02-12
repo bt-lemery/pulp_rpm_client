@@ -1,4 +1,4 @@
-# SwaggerClient::FileFileContent
+# PulpRpmClient::FileFileContent
 
 ## Properties
 Name | Type | Description | Notes

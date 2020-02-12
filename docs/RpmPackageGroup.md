@@ -1,4 +1,4 @@
-# SwaggerClient::RpmPackageGroup
+# PulpRpmClient::RpmPackageGroup
 
 ## Properties
 Name | Type | Description | Notes

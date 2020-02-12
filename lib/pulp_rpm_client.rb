@@ -120,10 +120,10 @@ require 'pulp_rpm_client/api/tasks_api'
 require 'pulp_rpm_client/api/uploads_api'
 require 'pulp_rpm_client/api/workers_api'
 
-module SwaggerClient
+module PulpRpmClient
   class << self
     # Customize default settings for the SDK using block.
-    #   SwaggerClient.configure do |config|
+    #   PulpRpmClient.configure do |config|
     #     config.username = "xxx"
     #     config.password = "xxx"
     #   end

@@ -1,4 +1,4 @@
-# SwaggerClient::RedisConnection
+# PulpRpmClient::RedisConnection
 
 ## Properties
 Name | Type | Description | Notes

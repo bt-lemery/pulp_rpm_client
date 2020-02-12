@@ -1,4 +1,4 @@
-# SwaggerClient::ContentPackageenvironmentsApi
+# PulpRpmClient::ContentPackageenvironmentsApi
 
 All URIs are relative to *http://localhost:24817*
 
@@ -21,13 +21,13 @@ PackageEnvironment ViewSet.
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::ContentPackageenvironmentsApi.new
+api_instance = PulpRpmClient::ContentPackageenvironmentsApi.new
 
 package_environment_href = 'package_environment_href_example' # String | URI of Package Environment. e.g.: /pulp/api/v3/content/rpm/packageenvironments/1/
 
@@ -35,7 +35,7 @@ package_environment_href = 'package_environment_href_example' # String | URI of 
 begin
   #Delete a package environment
   api_instance.delete(package_environment_href)
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling ContentPackageenvironmentsApi->delete: #{e}"
 end
 ```
@@ -73,13 +73,13 @@ PackageEnvironment ViewSet.
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::ContentPackageenvironmentsApi.new
+api_instance = PulpRpmClient::ContentPackageenvironmentsApi.new
 
 opts = { 
   repository_version: 'repository_version_example', # String | Repository Version referenced by HREF
@@ -95,7 +95,7 @@ begin
   #List package environments
   result = api_instance.list(opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling ContentPackageenvironmentsApi->list: #{e}"
 end
 ```
@@ -139,13 +139,13 @@ PackageEnvironment ViewSet.
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::ContentPackageenvironmentsApi.new
+api_instance = PulpRpmClient::ContentPackageenvironmentsApi.new
 
 package_environment_href = 'package_environment_href_example' # String | URI of Package Environment. e.g.: /pulp/api/v3/content/rpm/packageenvironments/1/
 
@@ -158,7 +158,7 @@ begin
   #Inspect a package environment
   result = api_instance.read(package_environment_href, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling ContentPackageenvironmentsApi->read: #{e}"
 end
 ```

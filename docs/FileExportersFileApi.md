@@ -1,4 +1,4 @@
-# SwaggerClient::FileExportersFileApi
+# PulpRpmClient::FileExportersFileApi
 
 All URIs are relative to *http://localhost:24817*
 
@@ -25,22 +25,22 @@ FileSystemExporters export content from a publication to a path on the file syst
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::FileExportersFileApi.new
+api_instance = PulpRpmClient::FileExportersFileApi.new
 
-data = SwaggerClient::FileFileFileSystemExporter.new # FileFileFileSystemExporter | 
+data = PulpRpmClient::FileFileFileSystemExporter.new # FileFileFileSystemExporter | 
 
 
 begin
   #Create a file file system exporter
   result = api_instance.create(data)
   p result
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling FileExportersFileApi->create: #{e}"
 end
 ```
@@ -78,13 +78,13 @@ FileSystemExporters export content from a publication to a path on the file syst
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::FileExportersFileApi.new
+api_instance = PulpRpmClient::FileExportersFileApi.new
 
 file_file_system_exporter_href = 'file_file_system_exporter_href_example' # String | URI of File File System Exporter. e.g.: /pulp/api/v3/file_exporters/file/file/1/
 
@@ -92,7 +92,7 @@ file_file_system_exporter_href = 'file_file_system_exporter_href_example' # Stri
 begin
   #Delete a file file system exporter
   api_instance.delete(file_file_system_exporter_href, )
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling FileExportersFileApi->delete: #{e}"
 end
 ```
@@ -130,23 +130,23 @@ Trigger an asynchronous task to export a file publication.
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::FileExportersFileApi.new
+api_instance = PulpRpmClient::FileExportersFileApi.new
 
 file_file_system_exporter_href = 'file_file_system_exporter_href_example' # String | URI of File File System Exporter. e.g.: /pulp/api/v3/file_exporters/file/file/1/
 
-data = SwaggerClient::PublicationExport.new # PublicationExport | 
+data = PulpRpmClient::PublicationExport.new # PublicationExport | 
 
 
 begin
   result = api_instance.export(file_file_system_exporter_href, data)
   p result
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling FileExportersFileApi->export: #{e}"
 end
 ```
@@ -185,13 +185,13 @@ FileSystemExporters export content from a publication to a path on the file syst
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::FileExportersFileApi.new
+api_instance = PulpRpmClient::FileExportersFileApi.new
 
 opts = { 
   name: 'name_example', # String | 
@@ -206,7 +206,7 @@ begin
   #List file file system exporters
   result = api_instance.list(opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling FileExportersFileApi->list: #{e}"
 end
 ```
@@ -249,24 +249,24 @@ FileSystemExporters export content from a publication to a path on the file syst
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::FileExportersFileApi.new
+api_instance = PulpRpmClient::FileExportersFileApi.new
 
 file_file_system_exporter_href = 'file_file_system_exporter_href_example' # String | URI of File File System Exporter. e.g.: /pulp/api/v3/file_exporters/file/file/1/
 
-data = SwaggerClient::FileFileFileSystemExporter.new # FileFileFileSystemExporter | 
+data = PulpRpmClient::FileFileFileSystemExporter.new # FileFileFileSystemExporter | 
 
 
 begin
   #Partially update a file file system exporter
   result = api_instance.partial_update(file_file_system_exporter_href, data)
   p result
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling FileExportersFileApi->partial_update: #{e}"
 end
 ```
@@ -305,13 +305,13 @@ FileSystemExporters export content from a publication to a path on the file syst
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::FileExportersFileApi.new
+api_instance = PulpRpmClient::FileExportersFileApi.new
 
 file_file_system_exporter_href = 'file_file_system_exporter_href_example' # String | URI of File File System Exporter. e.g.: /pulp/api/v3/file_exporters/file/file/1/
 
@@ -324,7 +324,7 @@ begin
   #Inspect a file file system exporter
   result = api_instance.read(file_file_system_exporter_href, , opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling FileExportersFileApi->read: #{e}"
 end
 ```
@@ -364,24 +364,24 @@ FileSystemExporters export content from a publication to a path on the file syst
 # load the gem
 require 'pulp_rpm_client'
 # setup authorization
-SwaggerClient.configure do |config|
+PulpRpmClient.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::FileExportersFileApi.new
+api_instance = PulpRpmClient::FileExportersFileApi.new
 
 file_file_system_exporter_href = 'file_file_system_exporter_href_example' # String | URI of File File System Exporter. e.g.: /pulp/api/v3/file_exporters/file/file/1/
 
-data = SwaggerClient::FileFileFileSystemExporter.new # FileFileFileSystemExporter | 
+data = PulpRpmClient::FileFileFileSystemExporter.new # FileFileFileSystemExporter | 
 
 
 begin
   #Update a file file system exporter
   result = api_instance.update(file_file_system_exporter_href, data)
   p result
-rescue SwaggerClient::ApiError => e
+rescue PulpRpmClient::ApiError => e
   puts "Exception when calling FileExportersFileApi->update: #{e}"
 end
 ```
